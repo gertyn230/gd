@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вхід — SORACRAFT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">
+      <svg class="rune" viewBox="0 0 32 32" fill="none">
+        <polygon points="16,2 29,9 29,23 16,30 3,23 3,9" stroke="url(#g1)" stroke-width="2"/>
+        <circle cx="16" cy="16" r="5" stroke="#45e8c8" stroke-width="1.6"/>
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#a56cff"/><stop offset="1" stop-color="#45e8c8"/></linearGradient></defs>
+      </svg>
+      SORACRAFT
+    </a>
+    <div class="navlinks">
+      <a href="index.html">Головна</a>
+      <a href="worlds.html">Світи</a>
+      <a href="index.html#features">Можливості</a>
+    </div>
+    <div class="navcta" id="navAuthArea"></div>
+  </nav>
+</header>
+
+<main>
+<div class="auth-shell">
+  <div class="auth-card">
+    <div class="auth-eyebrow">SORACRAFT</div>
+    <h1>З поверненням</h1>
+    <p class="auth-sub">Увійди, щоб продовжити пригоду у своїх світах.</p>
+
+    <div class="form-msg" id="formMsg"></div>
+
+    <form id="loginForm">
+      <div class="field" id="loginNickField">
+        <label for="loginNick">Нікнейм або пошта</label>
+        <input id="loginNick" type="text" autocomplete="username" placeholder="Steve_2020">
+        <div class="err">Введи нікнейм або пошту</div>
+      </div>
+      <div class="field" id="loginPassField">
+        <label for="loginPass">Пароль</label>
+        <input id="loginPass" type="password" autocomplete="current-password" placeholder="••••••••">
+        <div class="err">Введи пароль</div>
+      </div>
+      <button type="submit" class="btn btn-primary submit-btn">Увійти</button>
+    </form>
+
+    <div class="switch-line">Немає акаунта? <a href="register.html">Зареєструватися</a></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo" style="margin-bottom:14px;">SORACRAFT</div>
+      <div style="max-width:260px;">Аніме-мережа модифікованих серверів Minecraft. Не офіційний продукт Minecraft/Mojang.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/auth.js"></script>
+<script src="assets/main.js"></script>
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const formMsg = document.getElementById('formMsg');
+    formMsg.className = 'form-msg';
+
+    const login = document.getElementById('loginNick').value.trim();
+    const pass = document.getElementById('loginPass').value;
+
+    document.getElementById('loginNickField').classList.toggle('invalid', login.length===0);
+    document.getElementById('loginPassField').classList.toggle('invalid', pass.length===0);
+    if(login.length===0 || pass.length===0){
+      formMsg.textContent = 'Заповни всі поля';
+      formMsg.className = 'form-msg show bad';
+      return;
+    }
+
+    const result = soraLogin(login, pass);
+    if(!result.ok){
+      formMsg.textContent = 'Невірний нікнейм/пошта або пароль. Якщо в тебе ще немає акаунта — зареєструйся нижче.';
+      formMsg.className = 'form-msg show bad';
+      document.getElementById('loginPassField').classList.add('invalid');
+      return;
+    }
+
+    formMsg.textContent = 'Вхід виконано! Переходимо в кабінет...';
+    formMsg.className = 'form-msg show ok';
+    setTimeout(()=> window.location.href = 'cabinet.html', 500);
+  });
+</script>
+</body>
+</html>

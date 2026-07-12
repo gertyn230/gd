@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SORACRAFT — аніме-мережа Minecraft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">
+      <svg class="rune" viewBox="0 0 32 32" fill="none">
+        <polygon points="16,2 29,9 29,23 16,30 3,23 3,9" stroke="url(#g1)" stroke-width="2"/>
+        <circle cx="16" cy="16" r="5" stroke="#45e8c8" stroke-width="1.6"/>
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#a56cff"/><stop offset="1" stop-color="#45e8c8"/></linearGradient></defs>
+      </svg>
+      SORACRAFT
+    </a>
+    <div class="navlinks">
+      <a href="index.html">Головна</a>
+      <a href="worlds.html">Світи</a>
+      <a href="index.html#features">Можливості</a>
+    </div>
+    <div class="navcta" id="navAuthArea"></div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Весняний вайп уже на серверах</div>
+      <h1>Аніме-світи<br>всередині <span class="accent">Minecraft</span></h1>
+      <p class="lead">Магія, техно-модпаки та RPG-виміри в одній мережі. Створи акаунт, обери світ і почни пригоду за кілька хвилин.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="register.html">Створити акаунт</a>
+        <a class="btn btn-ghost" href="worlds.html">Переглянути світи</a>
+      </div>
+      <div class="ip-row">
+        <span>IP сервера</span>
+        <span class="ip-value mono">play.soracraft.net</span>
+        <button id="copyIpBtn">Копіювати</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="portal" viewBox="0 0 460 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="230" cy="210" rx="150" ry="150" stroke="url(#pg1)" stroke-width="1.5" opacity="0.5"/>
+        <ellipse cx="230" cy="210" rx="110" ry="110" stroke="url(#pg2)" stroke-width="1.5" opacity="0.7"/>
+        <ellipse cx="230" cy="210" rx="70" ry="70" fill="url(#pgFill)" opacity="0.35"/>
+        <g opacity="0.8">
+          <circle cx="230" cy="60" r="3" fill="#45e8c8"/>
+          <circle cx="380" cy="150" r="2.4" fill="#a56cff"/>
+          <circle cx="90" cy="300" r="2.4" fill="#ffb454"/>
+          <circle cx="360" cy="320" r="3" fill="#45e8c8"/>
+        </g>
+        <defs>
+          <linearGradient id="pg1" x1="0" y1="0" x2="460" y2="420"><stop stop-color="#a56cff"/><stop offset="1" stop-color="#45e8c8"/></linearGradient>
+          <linearGradient id="pg2" x1="460" y1="0" x2="0" y2="420"><stop stop-color="#45e8c8"/><stop offset="1" stop-color="#a56cff"/></linearGradient>
+          <radialGradient id="pgFill"><stop stop-color="#a56cff"/><stop offset="1" stop-color="transparent"/></radialGradient>
+        </defs>
+      </svg>
+      <div class="float-card fc1">
+        <div class="fc-label">Онлайн зараз</div>
+        <div class="fc-value" id="liveOnline">1 842</div>
+      </div>
+      <div class="float-card fc2">
+        <div class="fc-label">Світів активно</div>
+        <div class="fc-value">11</div>
+      </div>
+      <div class="float-card fc3">
+        <div class="fc-label">Вайп</div>
+        <div class="fc-value">Весна 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="wrap">
+    <div class="stat"><div class="num mono" id="statPlayers">1 842</div><div class="lbl">Онлайн гравців</div></div>
+    <div class="stat"><div class="num mono">96 400+</div><div class="lbl">Зареєстрованих акаунтів</div></div>
+    <div class="stat"><div class="num mono">11</div><div class="lbl">Унікальних світів</div></div>
+    <div class="stat"><div class="num mono">2020</div><div class="lbl">Рік заснування</div></div>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Світи мережі</div>
+    <h2>Обери свою пригоду</h2>
+    <p>Кожен світ — окремий модпак з унікальною механікою: від польотних островів до магічних академій.</p>
+  </div>
+  <div class="worlds">
+
+    <div class="world-card">
+      <svg class="world-banner" viewBox="0 0 400 110" preserveAspectRatio="none"><rect width="400" height="110" fill="#211a3d"/><path d="M0 90 L60 55 L120 80 L180 40 L240 70 L300 30 L360 60 L400 45 L400 110 L0 110 Z" fill="#2c2350"/><path d="M0 100 L80 75 L150 95 L220 60 L300 85 L400 70 L400 110 L0 110 Z" fill="#3a2d66"/></svg>
+      <div class="world-body">
+        <div class="world-tags"><span class="tag">Магія</span><span class="tag ether">RPG</span></div>
+        <h3>Dark Magic Academy</h3>
+        <p>Навчайся в академії чаклунів, вивчай заборонені школи магії та протистій пробудженим сутностям.</p>
+        <div class="world-foot">
+          <div class="online"><span class="dot"></span>412 онлайн</div>
+          <a class="btn btn-ghost btn-sm" href="worlds.html">Детальніше</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="world-card">
+      <svg class="world-banner" viewBox="0 0 400 110" preserveAspectRatio="none"><rect width="400" height="110" fill="#1a2f30"/><circle cx="70" cy="80" r="46" fill="#20423f"/><circle cx="230" cy="30" r="60" fill="#20423f"/><circle cx="360" cy="90" r="40" fill="#264a46"/></svg>
+      <div class="world-body">
+        <div class="world-tags"><span class="tag ether">Небо</span><span class="tag">Виживання</span></div>
+        <h3>FantasyTech Sky</h3>
+        <p>Виживай на летючому острові, здобувай ресурси незвичними способами й розбудовуй техно-базу в хмарах.</p>
+        <div class="world-foot">
+          <div class="online"><span class="dot"></span>287 онлайн</div>
+          <a class="btn btn-ghost btn-sm" href="worlds.html">Детальніше</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="world-card">
+      <svg class="world-banner" viewBox="0 0 400 110" preserveAspectRatio="none"><rect width="400" height="110" fill="#301a2e"/><polygon points="40,90 90,30 140,90" fill="#432a40"/><polygon points="150,90 210,20 270,90" fill="#4d3049"/><polygon points="260,90 320,45 380,90" fill="#432a40"/></svg>
+      <div class="world-body">
+        <div class="world-tags"><span class="tag">Техно</span><span class="tag ether">PvP</span></div>
+        <h3>UltraTech RPG</h3>
+        <p>Автоматизуй виробництво, прокачуй спорядження та змагайся за території на техно-аренах.</p>
+        <div class="world-foot">
+          <div class="online"><span class="dot"></span>531 онлайн</div>
+          <a class="btn btn-ghost btn-sm" href="worlds.html">Детальніше</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align:center; margin-top:32px;">
+    <a class="btn btn-ghost" href="worlds.html">Переглянути всі 11 світів</a>
+  </div>
+</section>
+
+<section id="features" class="wrap">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Чому SORACRAFT</div>
+    <h2>Створено для довгої пригоди</h2>
+    <p>Продумана система прогресу, чесна модерація та регулярний контент — усе, щоб хотілося повертатись.</p>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 38 38" fill="none"><rect x="4" y="4" width="30" height="30" rx="8" stroke="#a56cff" stroke-width="2"/><path d="M13 19h12M19 13v12" stroke="#45e8c8" stroke-width="2" stroke-linecap="round"/></svg>
+      <h3>Бонусна система</h3>
+      <p>Щоденні нагороди, лутбокси та система рефералів — запрошуй друзів і отримуй монети разом.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="15" stroke="#a56cff" stroke-width="2"/><path d="M19 11v8l6 4" stroke="#45e8c8" stroke-width="2" stroke-linecap="round"/></svg>
+      <h3>Регулярні вайпи</h3>
+      <p>Сезонні оновлення з новим контентом і темою для кожного світу — свіжий старт кожного сезону.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 38 38" fill="none"><path d="M19 5 32 11v9c0 8-6 12-13 13-7-1-13-5-13-13v-9z" stroke="#a56cff" stroke-width="2" stroke-linejoin="round"/><path d="M14 19l4 4 7-8" stroke="#45e8c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>Захист акаунта</h3>
+      <p>Історія входів, підтвердження пошти й контроль сесій у особистому кабінеті.</p>
+    </div>
+    <div class="feature">
+      <svg class="ic" viewBox="0 0 38 38" fill="none"><path d="M6 30V22a13 13 0 0126 0v8" stroke="#a56cff" stroke-width="2" stroke-linecap="round"/><circle cx="19" cy="14" r="6" stroke="#45e8c8" stroke-width="2"/></svg>
+      <h3>Жива спільнота</h3>
+      <p>Discord на 46 000+ учасників, турніри та подієвий календар щомісяця.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta-band">
+    <div>
+      <h2>Готовий зайти у світи?</h2>
+      <p>Реєстрація займає менше хвилини. Підтверди пошту — і одразу телепортуйся в перший світ.</p>
+    </div>
+    <a class="btn btn-primary" href="register.html">Зареєструватися безкоштовно</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo" style="margin-bottom:14px;">SORACRAFT</div>
+      <div style="max-width:260px;">Аніме-мережа модифікованих серверів Minecraft. Не офіційний продукт Minecraft/Mojang.</div>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <h4>Проєкт</h4>
+        <div><a href="worlds.html">Світи</a><a href="index.html#features">Можливості</a><a href="#">Правила</a></div>
+      </div>
+      <div class="foot-col">
+        <h4>Підтримка</h4>
+        <div><a href="#">Технічна підтримка</a><a href="#">Discord</a><a href="#">Telegram</a></div>
+      </div>
+      <div class="foot-col">
+        <h4>Правове</h4>
+        <div><a href="#">Умови використання</a><a href="#">Політика конфіденційності</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/auth.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
